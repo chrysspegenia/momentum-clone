@@ -1,6 +1,6 @@
 # Momentum App Clone
 
-    An clone application of the Momentum app designed to endhance productivity and provide a pleasant user experience.
+An clone application of the Momentum app designed to endhance productivity and provide a pleasant user experience.
 
 ### Key Features Include:
 
