@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Momentum</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  
+  <img id="bg-container">
+  
+  <div id="accomplish-notification"></div>
+
+  <div id="main-container">
+    <div id="clock-container">
+      <div id="rotate-icon" class="hover-container">
+        <i class="fa-solid fa-rotate"></i>
+      </div>
+      <h1 id="clock"></h1>
+      <div class="dot-container">
+        <div id="dotted-icon" class="hover-container">
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        <div id="modal-time">
+          <div class="modal-inner-container">
+            <span class="label">24-hour clock</span>
+            <div class="toggle">
+              <span class="indicator"></span>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+
+    <section class="greeting-section">
+      <div id="greeting-display">
+        <span id="greeting"></span>
+        <div class="username-container">
+          <span id="username">Name.</span>
+          <input id="username-input" class="input" type="text">
+        </div>
+      </div>
+      <div id="mantra-display"></div>
+      <div id="dot-icon-username" class="hover-container">
+        <i class="fa-solid fa-ellipsis"></i>
+      </div>
+      <div id="modal-greeting">
+        <li id="mantra-btn" class="modal-inner-container">Show today's mantra</li>
+        <li class="line"></li>
+        <li id="edit-name-btn" class="modal-inner-container">Edit your name</li>
+      </div>
+    </section>
+
+    <section id="goal-section">
+      <div class="goal-container goal-input-display toggle-active">
+        <h3 class="goal-header">What is your main focus for today?</h3>
+        <input id="goal-input" class="input" type="text">
+      </div>
+      <div class="goal-container goal-display">
+        <h3 class="goal-header">TODAY</h3>
+        <div id="goal-inner-container">
+          <input id="goal-checkbox" type="checkbox">
+          <div id="goal"></div>
+          <div id="dot-icon-goal" class="hover-container">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div> 
+          <div id="modal-goal">
+            <li id="edit-goal-btn" class="modal-inner-container"><i class="fa-solid fa-pencil goal-modal-icons"></i> Edit</li>
+            <li id="clear-goal-btn" class="modal-inner-container"><i class="fa-solid fa-xmark goal-modal-icons"></i>Clear</li>
+            <li class="modal-inner-container"><img class="goal-modal-icons" src="images/pomodoro.png">Start Pomodoro Timer<strong class="plus">PLUS</strong></li>
+            <li class="modal-inner-container"><img class="goal-modal-icons triangle-right" src="images/right-arrow.png">Turn on Autofocus<strong class="plus">PLUS</strong></li>
+          </div> 
+        </div>
+      </div>
+    </section>
+
+    <section id="quote-section">
+      <div id="quote"></div>
+      <div id="quote-speaker"></div>
+    </section>
+
+  </div>
+
+  <div id="todo-section">
+    <div id="todo-modal-btn">Todo</div>
+  </div>
+  <div class="todo-modal">
+    <div class="todo-header-container">
+      <div>
+        <span class="todo-header">Today</span>
+        <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i>
+      </div>
+      <div>
+        <div class="dot-icon-todo">
+          <i class="fa-solid fa-ellipsis"></i>
+        </div> 
+      </div>
+    </div>
+    <div id="todo-initial-display">
+      <div>Add a todo to get started</div>
+      <div>Switch to inbox ></div>
+      <div id="new-todo-btn">New Todo</div>
+    </div>
+    <ul id="todo-list-display"></ul>
+    <div class="todo-input-container">
+      <input id="todo-input" placeholder="New Todo">
+    </div>
+  </div>
+
+  <section class="settings-section">
+    <div class="settings-btn-container">
+      <i id="settings-btn" class="fa-solid fa-gear" style="color: #ffffff;"></i>
+    </div>
+    <div class="bg-info-container">
+      <span class="bg-location">location</span>
+      <span class="bg-photographer">bg-photographer</span>
+    </div>
+  </section>
+
+  <div class="settings-modal">
+    <section class="left-section">
+      <ul class="settings-headers-container">
+        <li class="settings-header">General</li>
+        <li class="settings-header">Todo</li>
+        <li class="settings-header">Mantras</li>
+        <li class="settings-header">Photos</li>
+        <li class="settings-header">Quotes</li>
+        <li class="settings-header">Links & Bookmarks</li>
+        <li class="settings-header">Balance</li>
+      </ul>
+      <ul class="settings-headers-container">
+        <li class="settings-header sub-header">Take a Tour</li>
+        <li class="settings-header sub-header">Help</li>
+        <li class="settings-header sub-header">Release Notes</li>
+        <li class="settings-header sub-header">About</li>
+        <li class="settings-header sub-header">Upgrade to Plus</li>
+      </ul>
+    </section>
+    <section class="right-section">
+      <div class="section-header">
+        <div class="header-title-container">
+          <div class="header-title">Quotes</div>
+          <div class="header-text">A daily reminder for inspiration and growth</div>
+        </div>
+        <div class="add-quote-btn">+ Add Quote<strong class="plus">PLUS</strong></div>
+      </div>
+      <div class="add-quote-display">
+        <div class="quote-input-container">
+          <textarea class="quote-input" name="quote" placeholder="A quote to inspire and brighten up your day"></textarea>
+          <input type="text" class="quote-speaker-input" name="speaker" placeholder="Dont forget to credit the speaker">
+        </div>
+        <div class="save-quote-btn">Save</div>
+      </div>
+      <div class="quotes-display-settings"></div>
+    </section>
+  </div>
+
+  <script type="module" src="variables.js" defer></script>
+  <script type="module" src="script.js" defer></script>
+  <script type="module" src="todo-list.js" defer></script>
+  <script type="module" src="settings.js" defer></script>
+</body>
+
+</html>
